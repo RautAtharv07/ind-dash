@@ -1,0 +1,39 @@
+/* src/components/PieChartWidget.module.css */
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.colorBox {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.filterBar {
+  margin-bottom: 15px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  background: white;
+  width: 100%;
+}

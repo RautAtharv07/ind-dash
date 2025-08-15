@@ -1,0 +1,49 @@
+/* src/components/Dashboard.module.css */
+.dashboard {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  height: 100%;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.middleSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+.bottomSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .topSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .middleSection {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .bottomSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    grid-template-columns: 1fr;
+  }
+  
+  .middleSection {
+    grid-template-columns: 1fr;
+  }
+}

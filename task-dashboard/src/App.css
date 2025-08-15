@@ -1,0 +1,32 @@
+/* src/App.css */
+:root {
+  --light-bg: #f5f7fa;
+  --widget-bg: #ffffff;
+  --widget-border: #e0e0e0;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --majar-purple: #8a2be2;
+  --majar-purple-light: #9d45e5;
+  --majar-purple-dark: #7a1dc9;
+  --caution-color: #ff9800;
+  --danger-color: #f44336;
+  --success-color: #4caf50;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}

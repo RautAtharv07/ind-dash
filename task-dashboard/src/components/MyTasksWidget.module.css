@@ -1,0 +1,110 @@
+/* src/components/MyTasksWidget.module.css */
+.filterBar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  background: var(--darker-bg);
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  min-width: 120px;
+}
+
+.taskTable {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--widget-border);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  background: rgba(138, 43, 226, 0.2);
+  font-weight: 600;
+  padding: 12px 15px;
+}
+
+.headerCell {
+  padding: 0 5px;
+}
+
+.tableBody {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--widget-border);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.tableRow:hover {
+  background: rgba(138, 43, 226, 0.1);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.statusBadge.ToDo {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.statusBadge.InProgress {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196F3;
+}
+
+.statusBadge.Completed {
+  background: rgba(156, 39, 176, 0.2);
+  color: #9C27B0;
+}
+
+.priorityBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.priorityBadge.High {
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+}
+
+.priorityBadge.Medium {
+  background: rgba(255, 152, 0, 0.2);
+  color: #FF9800;
+}
+
+.priorityBadge.Low {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}

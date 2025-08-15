@@ -1,0 +1,135 @@
+/* src/components/AtMentionsWidget.module.css */
+.filterBar {
+  margin-bottom: 15px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  background: white;
+  width: 100%;
+}
+
+.mentionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.mentionCard {
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(138, 43, 226, 0.05);
+  border: 1px solid rgba(138, 43, 226, 0.1);
+  transition: all 0.2s;
+}
+
+.taskMention {
+  background: rgba(255, 152, 0, 0.05);
+  border: 1px solid rgba(255, 152, 0, 0.1);
+}
+
+.mentionCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mentionHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.userName {
+  font-weight: 600;
+}
+
+.mentionSource {
+  background: rgba(138, 43, 226, 0.1);
+  color: var(--majar-purple);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.message {
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.mentionFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.replyButton {
+  padding: 5px 10px;
+  background: rgba(138, 43, 226, 0.1);
+  color: var(--majar-purple);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.replyButton:hover {
+  background: rgba(138, 43, 226, 0.2);
+}
+
+/* Keep existing reply container styles */
+
+/* src/components/AtMentionsWidget.module.css */
+/* Add to existing file */
+.replyContainer {
+  border: 1px solid var(--majar-purple);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.replyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--majar-purple);
+}
+
+.cancelReply {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.replyTextarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+
+.replyActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submitReply {
+  padding: 8px 16px;
+  background: var(--majar-purple);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

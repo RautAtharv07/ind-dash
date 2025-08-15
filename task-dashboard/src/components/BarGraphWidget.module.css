@@ -1,0 +1,16 @@
+/* src/components/BarGraphWidget.module.css */
+.chartContainer {
+  height: 200px;
+}
+
+.filterBar {
+  margin-bottom: 15px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  background: white;
+  width: 100%;
+}

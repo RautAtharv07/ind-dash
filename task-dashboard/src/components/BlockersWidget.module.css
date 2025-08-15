@@ -1,0 +1,140 @@
+/* src/components/BlockersWidget.module.css */
+.filterBar {
+  margin-bottom: 15px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  background: white;
+  width: 100%;
+}
+
+.addButton {
+  width: 100%;
+  padding: 12px;
+  background: var(--majar-purple);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.addButton:hover {
+  background: var(--majar-purple-light);
+}
+
+.blockersList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.blockerItem {
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--widget-border);
+}
+
+.blockerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blockerTitle {
+  margin: 0;
+  font-size: 16px;
+  flex: 1;
+}
+
+/* From second snippet */
+.statusSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  background: white;
+  min-width: 120px;
+}
+
+/* From first snippet */
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+}
+
+.statusBadge.resolved {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+}
+
+.blockerDescription {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.blockerMeta {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Keep existing form styles from first snippet */
+.blockerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.formInput, .formTextarea {
+  padding: 10px 12px;
+  background: var(--darker-bg);
+  border: 1px solid var(--widget-border);
+  border-radius: 6px;
+  color: var(--text-primary);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+}
+
+.cancelButton, .submitButton {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancelButton {
+  background: var(--darker-bg);
+  color: var(--text-primary);
+}
+
+.submitButton {
+  background: var(--majar-purple);
+  color: white;
+}
+
+.submitButton:hover {
+  background: var(--majar-purple-light);
+}

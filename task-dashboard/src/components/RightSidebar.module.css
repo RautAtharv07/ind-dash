@@ -1,0 +1,94 @@
+/* src/components/RightSidebar.module.css */
+.sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2000; /* Increased z-index */
+}
+
+.sidebar {
+  width: 450px;
+  height: 100%;
+  background: var(--widget-bg);
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0); /* Ensure it's visible */
+  opacity: 1; /* Ensure it's fully opaque */
+}
+
+.sidebarHeader {
+  padding: 20px;
+  border-bottom: 1px solid var(--widget-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: var(--text-primary);
+}
+
+.sidebarContent {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  background: white;
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.taskItem {
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.taskItem:hover {
+  background: rgba(255, 152, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.taskTitle {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+}
+
+.taskDue, .taskTime {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.mentionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

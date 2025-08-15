@@ -1,0 +1,30 @@
+/* src/components/TaskCautionWidget.module.css */
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.taskItem {
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.taskItem:hover {
+  background: rgba(255, 152, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.taskTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.taskDue {
+  font-size: 14px;
+  color: var(--text-secondary);
+}

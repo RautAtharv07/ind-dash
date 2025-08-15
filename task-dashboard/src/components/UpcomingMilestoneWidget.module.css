@@ -1,0 +1,58 @@
+/* src/components/UpcomingMilestoneWidget.module.css */
+.milestoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.milestoneItem {
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid var(--widget-border);
+}
+
+.milestoneHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.milestoneTitle {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.milestoneDate {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.dependencyCount {
+  background: rgba(138, 43, 226, 0.1);
+  color: var(--majar-purple);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.dependenciesList {
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.dependencyItem {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+}
+
+.dependencyBullet {
+  margin-right: 8px;
+  color: var(--majar-purple);
+}

@@ -1,0 +1,34 @@
+/* src/components/TodaysTaskWidget.module.css */
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskTime {
+  width: 80px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.taskButton {
+  flex: 1;
+  padding: 10px 12px;
+  background: rgba(138, 43, 226, 0.15);
+  border: 1px solid var(--majar-purple);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.taskButton:hover {
+  background: rgba(138, 43, 226, 0.25);
+}
