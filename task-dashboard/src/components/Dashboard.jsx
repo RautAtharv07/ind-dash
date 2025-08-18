@@ -65,16 +65,16 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={styles.dashboard}>
-      {/* Top Section */}
-      <div className={styles.topSection}>
-        <TaskCautionWidget 
-          onMoreClick={() => handleMoreClick('caution')}
-          onTaskClick={handleTaskClick}
-        />
-        <TodaysTaskWidget onMoreClick={() => handleMoreClick('today')} />
-        <AtMentionsWidget onMoreClick={() => handleMoreClick('mentions')} />
-      </div>
+     <div className={styles.dashboard}>
+    {/* Top Section - Reorganized */}
+    <div className={styles.topSection}>
+      <TodaysTaskWidget onMoreClick={() => handleMoreClick('today')} />
+      <TaskCautionWidget 
+        onMoreClick={() => handleMoreClick('caution')}
+        onTaskClick={handleTaskClick}
+      />
+      <AtMentionsWidget onMoreClick={() => handleMoreClick('mentions')} />
+    </div>
 
       {/* Middle Section */}
       <div className={styles.middleSection}>
