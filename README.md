@@ -11,8 +11,7 @@ Follow these steps to download the project and run it locally:
 ### 1. Clone the Repository
 
 
-git clone https://github.com/your-username/your-repo-name.git
-  cd your-repo-name
+git clone https://github.com/RautAtharv07/ind-dash.git
 
 ### 2. Install Dependencies
 
