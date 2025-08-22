@@ -1,24 +1,30 @@
 /* src/App.css */
 :root {
-  --light-bg: #f5f7fa;
+  --light-bg: #f8f9fa;
   --widget-bg: #ffffff;
-  --widget-border: #e0e0e0;
-  --text-primary: #2c3e50;
-  --text-secondary: #7f8c8d;
+  --widget-border: #e0e6ed;
+  --text-primary: #2d3748;
+  --text-secondary: #718096;
   --majar-purple: #8a2be2;
   --majar-purple-light: #9d45e5;
   --majar-purple-dark: #7a1dc9;
   --caution-color: #ff9800;
   --danger-color: #f44336;
   --success-color: #4caf50;
+  --vibrant-blue: #4361ee;
+  --vibrant-pink: #f72585;
+  --vibrant-green: #06d6a0;
+  --vibrant-yellow: #ffd166;
+  --vibrant-orange: #fb8500;
 }
 
 body {
-  background-color: var(--light-bg);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   color: var(--text-primary);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 * {
@@ -29,4 +35,53 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   padding: 20px;
+}
+
+/* Update widget styles for more vibrant appearance */
+.widget {
+  background: var(--widget-bg);
+  border: 1px solid var(--widget-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.widgetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(139, 43, 226, 0.1);
+}
+
+.widgetTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--majar-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.moreButton {
+  background: rgba(139, 43, 226, 0.1);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: var(--majar-purple);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.moreButton:hover {
+  background: rgba(139, 43, 226, 0.2);
+  transform: scale(1.05);
 }

@@ -1,0 +1,299 @@
+/* src/components/TodayTaskDetailPopup.module.css */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  padding: 20px;
+}
+
+.popupContent {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f1f1 100%);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  color: #000;
+  font-size: 28px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.popupHeader {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.taskTitle {
+  margin: 0 0 15px 0;
+  font-size: 28px;
+  color: #000;
+  font-weight: 700;
+  text-shadow: none;
+}
+
+.taskMeta {
+  display: flex;
+  gap: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+}
+
+.taskDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.detailSection {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.detailSection h4 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+}
+
+.detailSection p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 1.6;
+}
+
+.completionSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.completionSelect {
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #000;
+  min-width: 100px;
+}
+
+.completionSelect option {
+  background: #ffffff;
+  color: #000;
+}
+
+.progressBar {
+  flex: 1;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.resourceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resourceInput {
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #000;
+}
+
+.resourceInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.resourceLink {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.resourceLink:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+.dependencySection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dependencyInput {
+  display: flex;
+  gap: 10px;
+}
+
+.dependencyField {
+  flex: 1;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #000;
+}
+
+.addDependencyButton {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.addDependencyButton:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dependenciesList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.dependencyItem {
+  padding: 8px 0;
+  color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dependencyBullet {
+  margin-right: 10px;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.commentItem {
+  padding: 15px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.commentUser {
+  font-weight: 600;
+  color: #000;
+}
+
+.commentTime {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.commentText {
+  margin: 0;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.mentions {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #0077cc;
+}
+
+.commentForm {
+  margin-top: 20px;
+}
+
+.commentInput {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #000;
+  margin-bottom: 12px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.commentInput::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.commentButton {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #0077cc, #005fa3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 119, 204, 0.4);
+}
+
+.commentButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 204, 0.6);
+}
