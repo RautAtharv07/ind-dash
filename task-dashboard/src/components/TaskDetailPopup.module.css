@@ -1,4 +1,3 @@
-/* src/components/TaskDetailPopup.module.css */
 .popupOverlay {
   position: fixed;
   top: 0;
@@ -9,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3000; /* Higher than sidebar */
+  z-index: 3000;
   padding: 20px;
 }
 
@@ -96,6 +95,23 @@
   border-radius: 6px;
   color: var(--text-primary);
   width: 200px;
+  margin-bottom: 10px;
+}
+
+.progressWrapper {
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0;
+  transition: width 0.3s ease, background 0.3s ease;
+  border-radius: 5px;
 }
 
 .historyList {
@@ -132,7 +148,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
-  align-items: center; /* from first snippet */
+  align-items: center;
 }
 
 .commentUser {
@@ -182,7 +198,6 @@
   background: var(--majar-purple-light);
 }
 
-/* Reply feature styles from first snippet */
 .replyToButton {
   background: none;
   border: none;

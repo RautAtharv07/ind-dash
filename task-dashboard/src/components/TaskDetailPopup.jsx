@@ -1,16 +1,13 @@
-// src/components/TaskDetailPopup.jsx
 import React, { useState } from 'react';
 import styles from './TaskDetailPopup.module.css';
 
 const TaskDetailPopup = ({ task, onClose }) => {
-  const [status, setStatus] = useState(task.status || 'To Do');
+  const [status, setStatus] = useState(task.status || '0%');
   const [comments, setComments] = useState([
     { id: 1, user: 'You', text: 'Started working on this task', time: '2 hours ago' },
     { id: 2, user: 'Sarah Johnson', text: 'Please include the latest metrics', time: '1 hour ago' },
   ]);
   const [newComment, setNewComment] = useState('');
-  
-  // New reply-related states
   const [replyingTo, setReplyingTo] = useState(null);
 
   const handleStatusChange = (e) => {
@@ -39,6 +36,20 @@ const TaskDetailPopup = ({ task, onClose }) => {
     }
   };
 
+  // Map status to progress value and color
+  const statusOptions = [
+    { value: '0%', color: '#9e9e9e' },
+    { value: '10%', color: '#ff7043' },
+    { value: '25%', color: '#ff9800' },
+    { value: '35%', color: '#fbc02d' },
+    { value: '50%', color: '#64b5f6' },
+    { value: '65%', color: '#1976d2' },
+    { value: '75%', color: '#388e3c' },
+    { value: '100%', color: '#2e7d32' },
+  ];
+
+  const currentOption = statusOptions.find(opt => opt.value === status) || statusOptions[0];
+
   return (
     <div className={styles.popupOverlay} onClick={onClose}>
       <div className={styles.popupContent} onClick={e => e.stopPropagation()}>
@@ -64,12 +75,22 @@ const TaskDetailPopup = ({ task, onClose }) => {
               value={status} 
               onChange={handleStatusChange}
               className={styles.statusSelect}
+              style={{ color: currentOption.color, fontWeight: 600 }}
             >
-              <option value="To Do">To Do</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Completed">Completed</option>
-              <option value="Blocked">Blocked</option>
+              {statusOptions.map(opt => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.value}
+                </option>
+              ))}
             </select>
+
+            {/* Progress bar */}
+            <div className={styles.progressWrapper}>
+              <div 
+                className={styles.progressFill} 
+                style={{ width: status, background: currentOption.color }}
+              />
+            </div>
           </div>
           
           <div className={styles.detailSection}>

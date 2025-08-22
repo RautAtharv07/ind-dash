@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Workspace</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000; /* pure black */
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ffdd40;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #ffdd40;
+      color: #000;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      background: #ffd000;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Workspace</h1>
+    <!-- Button to open dashboard -->
+    <button class="btn" onclick="openDashboard()">Go to Dashboard</button>
+  </div>
+
+  <script>
+    function openDashboard() {
+      // If you're serving React with routing, you'd navigate via route
+      // For now just linking to file path
+      window.location.href = "C:/Users/User/Desktop/simple/task-dashboard/src/components/Dashboard.jsx";
+    }
+  </script>
+</body>
+</html>
